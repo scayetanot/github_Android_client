@@ -1,5 +1,17 @@
 package com.seb.sebastien.githubclient.Gists;
 
+import android.util.Log;
+
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonPrimitive;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.util.List;
+
 /**
  * Created by sebastien on 12/10/17.
  */
@@ -12,9 +24,9 @@ public class GistsFormat {
     private String commits_url;
     private String id;
     private String description;
-    private GistsOwner gOwner;
+    private GistsOwner owner;
     private String user;
-    private GistsErl files;
+    private JsonElement files;
     private boolean truncated;
     private int comments;
     private String comments_url;
@@ -29,9 +41,11 @@ public class GistsFormat {
     public String getCommits_url(){return commits_url;}
     public String getId(){return id;}
     public String getDescription(){return description;}
-    public GistsOwner getgOwner(){return gOwner;}
+    public GistsOwner getOwner(){return owner;}
     public String getUser(){return user;}
-    public GistsErl getFiles(){return files;}
+    public String getFiles(){
+        return files.getAsJsonObject().toString();
+    }
     public boolean getTruncated(){return truncated;}
     public int getComments(){return comments;}
     public String getComments_url(){return comments_url;}

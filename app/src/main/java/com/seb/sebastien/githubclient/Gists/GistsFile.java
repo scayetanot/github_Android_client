@@ -6,16 +6,16 @@ package com.seb.sebastien.githubclient.Gists;
 
 public class GistsFile {
 
-    private int size;
-    private String raw_url;
+    private String filename;
     private String type;
-    private boolean truncated;
     private String language;
+    private String raw_url;
+    private int size;
 
-    public int getSize(){ return size; }
-    public String getRaw_url() {return raw_url;}
+    public String getFilename() {return filename;}
     public String getType() {return type;}
-    public boolean getTruncated() {return truncated;}
     public String getLanguage() {return language;}
+    public String getRaw_url() {return raw_url;}
+    public int getSize(){ return size; }
 
 }

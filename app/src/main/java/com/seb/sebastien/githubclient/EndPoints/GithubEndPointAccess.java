@@ -1,4 +1,4 @@
-package com.seb.sebastien.githubclient;
+package com.seb.sebastien.githubclient.EndPoints;
 
 import com.seb.sebastien.githubclient.Gists.GistsFormat;
 
@@ -26,15 +26,10 @@ public class GithubEndPointAccess {
     private Retrofit mRetrofit;
 
     public interface GitHubEndpointService {
-
-
         @Headers("Accept: application/vnd.github.v3+json")
         @GET("/gists/public")
-            Call<List<GistsFormat>> getListOfPublicGists();
-
+        Call<List<GistsFormat>> getListOfPublicGists();
     }
-
-
 
     public GithubEndPointAccess(){
 
